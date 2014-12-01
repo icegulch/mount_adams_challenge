@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mount Adams Challenge</title>
+    <meta name="description" content="The Mount Adams challenge is an entirely informal event, to be undertaken by individuals who are looking for a personal challenge, and purely for their own satisfaction.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_tag '/images/favicon.ico' %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:100,500', 'site' %>
+    <%= yield_content :style %>
+    <%= javascript_include_tag 'modernizr-2.7.1.min.js', 'application' %>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <main role="main">
+      <%= yield %>
+    </main>
+
+    <%= yield_content :script %>
+
+  </body>
+</html>
