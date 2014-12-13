@@ -1,31 +1,23 @@
 /* Application JS: */
 
 //= require "jquery-1.10.2"
-//= require "jquery.fullPage"
-//= require "jquery.easings.min"
-//= require "jquery.slimscroll.min"
+//= require "waypoints"
 
-    var jQuery = jQuery.noConflict();
-    jQuery(function() {
+  var jQuery = jQuery.noConflict();
+  jQuery(function() {
 
-      if( jQuery(window).width() > 768) {
+    // jQuery('.module').waypoint(function() {
+    //   var kids = jQuery(this).find('.fade');
+    //   kids.toggleClass('in');
+    // }, { offset: 1 });
+    jQuery('#welcome .fade').addClass('in');
 
-        // enable full page scrolling & animations
-        jQuery('#fullpage').fullpage({
-          resize: false,
-          anchors: ['welcome', 'challenge', 'reward', 'point', 'route', 'rules', 'results', 'sponsors'],
-          scrollingSpeed: 900,
-          'afterLoad': function (anchorLink, index) {
-            jQuery('.section.active').addClass('in');
-          },
-          onLeave: function(index, nextIndex, direction, anchorLink){
-            jQuery('.section:not(.active)').removeClass('in');
-          }
+    // var waypointOffset = jQuery('[data-waypoint-offset]');
+    // var pullTrigger = jQuery('[data-waypoint-trigger]');
+    // var damnKids = jQuery('[data-waypoint-trigger]');
+    // jQuery(pullTrigger).waypoint(function() {
+    //   jQuery(damnKids).toggleClass('in');
+    // }, { offset: waypointOffset });
 
-        });
-
-      }
-
-    });
-
+  });
 

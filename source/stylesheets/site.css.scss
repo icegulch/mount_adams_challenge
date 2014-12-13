@@ -1,7 +1,6 @@
 
 /*
   *= require 'reset.css'
-  *= require 'jquery.fullPage.css'
 */
 
 @import
@@ -17,31 +16,28 @@
 
 body {
   margin: 0;
-	background-color: #262626;
-  color: #fff;
-  color: rgba(255,255,255, 0.9);
-  font: 300 16px/1.25 raleway, sans-serif;
-  @media screen and (max-width: 767px) {
-    color: #333;
-  }
+	background-color: #fff;
+  color: #666;
+  font: 200 16px/1.65 "mercury text", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
 }
 
-h1 {
-  margin: 0 0 8px;
-  font: 100 32px/1 raleway, sans-serif;
-  color: #fff;
-  @media screen and (max-width: 767px) {
-    color: $accent;
-  }
-}
-
-p {
+p, ol, ul {
   margin: 0;
+  + p, + ol, + ul {
+    margin-top: 18px;
+  }
 }
 
 ol {
   list-style-type: decimal;
   margin: 0 0 0 30px;
+}
+
+strong, b, dt {
+  font-weight: 700;
+  color: #333;
 }
 
 a {
@@ -51,236 +47,132 @@ a {
   }
 }
 
+.module {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
 
-// SLIDES
-
-[data-anchor="welcome"] {
+.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
-  .logo {
-    margin: 0 0 90px;
-  }
-  .more-link {
-    margin: 0 0 5px;
-    font: 100 14px raleway, sans-serif;
-  }
-  @media screen and (max-width: 767px) {
-    background-color: $accent;
-    .logo {
-      width: 75% !important;
-      margin: 15px auto;
-    }
-    .bg-image, .more-link, .cta-button {
-      display: none;
-    }
+  // &:before, &:after {
+  //   content: "";
+  //   display: block;
+  //   width: 0;
+  //   height: 0;
+  //   border-style: solid;
+  //   position: absolute;
+  //   bottom: 0;
+  //   z-index: 2;
+  // }
+  // &:before {
+  //   border-width: 100vh 0 0 100vw;
+  //   border-color: transparent transparent transparent #fff;
+  //   right: 50%;
+  // }
+  // &:after {
+  //   border-width: 0 0 100vh 100vw;
+  //   border-color: transparent transparent #fff transparent;
+  //   left: 50%;
+  // }
+}
+
+.parallax-1 {
+  height: 80vh;
+  background-image: image-url("welcome.jpg");
+}
+
+.parallax-2 {
+  background-image: image-url("challenge.jpg");
+}
+
+.parallax-3 {
+  background-image: image-url("rules.jpg");
+}
+
+.parallax-4 {
+  background-image: image-url("route.jpg");
+}
+
+.container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content-section {
+  padding: 40px 0;
+  + .content-section {
+    padding-top: 0;
   }
 }
 
-[data-anchor="challenge"] {
-  .tableCell {
-    vertical-align: top;
-  }
-  .article {
-    margin: 100px 0 0 50px;
-  }
-  @media screen and (max-width: 767px) {
-    .article {
-      margin: 0;
-    }
-  }
-}
-
-[data-anchor="reward"] {
-  .tableCell {
-    vertical-align: top;
-  }
-  .article {
-    margin: 100px 0 0 50px;
-  }
-  @media screen and (max-width: 767px) {
-    .article {
-      margin: 0;
-    }
-  }
-}
-
-[data-anchor="point"] {
-  .tableCell {
-    vertical-align: top;
-  }
-  .article {
-    margin: 100px 0 0 50px;
-  }
-  @media screen and (max-width: 767px) {
-    .article {
-      margin: 0;
-    }
-  }
-}
-
-[data-anchor="route"] {
-  .article {
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 767px) {
-    .article {
-      margin: 0;
-    }
-  }
-}
-
-[data-anchor="rules"] {
-  .article {
-    margin: 0 0 0 45%;
-    bottom: 0;
-  }
-  @media screen and (max-width: 767px) {
-    .article {
-      margin: 0;
-    }
-  }
-}
-
-[data-anchor="results"] {
+.content-alt {
   background-color: $accent;
+}
+
+.content-footer {
+  background-color: #262626;
   color: #fff;
-  text-align: center;
-  .article-squeeze {
-    padding: 30px 15px;
-  }
-  .results-image {
-    img {
-      opacity: 0.98;
-    }
-  }
-  .article-heading {
-    margin: 8px 0 30px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 1;
-    color: #fff;
-  }
-  .results-table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 2px 1px;
-    font-size: 15px;
-  }
-  th {
-    padding: 5px;
-    background-color: darken($accent, 6%);
-    font-weight: 500;
-  }
-  td {
-    margin: 10px 0 0;
-    padding: 5px;
-    background-color: darken($accent, 2%);
-  }
-  tr:nth-child(even) td {
-    background-color: darken($accent, 3%);
-  }
-  @media screen and (min-width: 768px) {
-    .article-squeeze {
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
-    .article-heading {
-      margin-bottom: 40px;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    .article-squeeze {
-      margin-left: 3.5%;
-      margin-right: 3.5%;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .article-squeeze {
-      margin-left: 12.5%;
-      margin-right: 12.5%;
-    }
-  }
 }
 
-[data-anchor="sponsors"] {
-  background: transparent image-url('scanlines.png') repeat 0 0;
-  text-align: center;
-  .reward-sponsors {
-    margin: 0 0 40px;
-  }
-  .reward-sponsors-caption {
-    margin: 0 0 10px;
-  }
-  aside + aside {
-    margin-top: 10px;
-  }
-  @media screen and (max-width: 767px) {
-    padding: 40px 30px;
-    color: #fff;
-    .reward-sponsors {
-      img {
-        height: 80px !important;
-      }
-      a:first-of-type img {
-        margin-left: -30px;
-      }
-    }
-  }
-}
-
-
-// MODULES
-
-.article {
+.article-title {
   position: relative;
-  z-index: 2;
-}
-
-.article-highlighted {
-  padding: 20px;
-  border-left: 5px solid rgba(0,0,0, 0.2);
-  background-color: transparentize($accent, 0.35);
-  a {
-    color: #fff;
-  }
-  p + p {
-    margin: 20px 0 0;
-  }
-  b {
-    font-weight: 500;
-  }
-  @media screen and (min-width: 768px) {
-    width: 580px;
-  }
-  @media screen and (max-width: 767px) {
-    background-color: #fff;
-    border-left: none;
-  }
-}
-
-.bg-image {
-  display: block;
-  @media screen and (max-width: 767px) {
-    max-width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    min-height: 100%;
-    min-width: 1280px;
-    width: 100%;
-    height: auto;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0 7px;
+  font: 500 11px/1 gotham, sans-serif;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.125em;
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0;
-    @include transition(all, 1.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-    .in &, .no-js &, .no-csstransitions & {
-      opacity: 1;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+    background-color: $accent;
+  }
+}
+
+#results {
+  .article {
+    position: relative;
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
+    &:before {
+      border-width: 60vh 100vw 0 0;
+      border-color: #fff transparent transparent transparent;
+      right: 50%;
+    }
+    &:after {
+      border-width: 0 100vw 60vh 0;
+      border-color: transparent #fff transparent transparent;
+      left: 50%;
     }
   }
+  table {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+  }
 }
+
 
 
 // STATES
@@ -288,13 +180,17 @@ a {
 // fades in/out content
 .fade {
   opacity: 0;
-  @include transition(all, 1.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  .in &, .no-js &, .no-csstransitions & {
+  @include transition(opacity, 1.5s, cubic-bezier(.10, .10, .25, .90));
+  &.in {
     opacity: 1;
   }
-  @media screen and (max-width: 767px) {
-    opacity: 1;
-  }
+}
+
+#welcome .fade {
+  -webkit-transition: opacity 5s cubic-bezier(.10, .10, .25, .90);
+  -moz-transition: opacity 5s cubic-bezier(.10, .10, .25, .90);
+  -o-transition: opacity 5s cubic-bezier(.10, .10, .25, .90);
+  transition: opacity 5s cubic-bezier(.10, .10, .25, .90);
 }
 
 // slide in/out from either left or right
@@ -302,7 +198,7 @@ a {
   position: relative;
   right: -100%;
   @include transition(right, 0.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  .in &, .no-js &, .no-csstransitions & {
+  &.in, .no-js &, .no-csstransitions & {
     right: 0;
   }
   @media screen and (max-width: 767px) {
@@ -310,13 +206,11 @@ a {
   }
 }
 
-
-
 .slide-left {
   position: relative;
   left: -100%;
   @include transition(left, 0.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  .in &, .no-js &, .no-csstransitions & {
+  &.in, .no-js &, .no-csstransitions & {
     left: 0;
   }
   @media screen and (max-width: 767px) {
@@ -331,7 +225,7 @@ a {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  .in &, .no-js &, .no-csstransitions & {
+  &.in, .no-js &, .no-csstransitions & {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
