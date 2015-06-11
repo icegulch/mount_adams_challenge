@@ -60,7 +60,8 @@ a {
   background-image: image-url("welcome.jpg");
   .logo {
     display: block;
-    max-width: 100%;
+    width: 75%;
+    max-width: 300px;
     height: auto;
     margin: 0 auto;
   }
@@ -79,6 +80,11 @@ a {
     margin: 0 auto;
     background: $accent image-url('cta.png') no-repeat 50% 50%;
     background-size: 17px 17px;
+  }
+  @media screen and (max-width: 767px) {
+    .more-link, .cta-button {
+      display: none;
+    }
   }
 }
 
@@ -175,6 +181,9 @@ a {
     .route-segment-stat-gain-figure {
       font-size: 36px;
       font-weight: 100;
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
     }
     .route-segment-stat-gain-unit {
       font-size: 12px;
@@ -424,9 +433,9 @@ a {
 }
 
 .secondary-title-altbg {
-  color: $accent;
+  color: darken($accent, 10%);
   &:after {
-    background-color: transparentize($accent, 0.5);
+    background-color: darken($accent, 10%);
   }
 }
 
