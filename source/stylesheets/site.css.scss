@@ -209,11 +209,32 @@ a {
     border-color: transparent #fff transparent transparent;
     left: 50%;
   }
-  table {
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
+}
+
+.results-table {
+  width: 100%;
+  margin: 30px auto 0;
+  text-align: left;
+  color: #fff;
+  th {
+    text-transform: uppercase;
+    background-color: darken($accent, 3%);
+  }
+  th, td {
+    padding: 3px;
+  }
+  tbody > tr:nth-child(even) > td {
+    background-color: darken($accent, 3%);
+  }
+}
+
+.alt-section-text {
+  margin: 30px 0 0;
+  text-align: left;
+  color: #fff;
+  a {
     color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -391,6 +412,13 @@ a {
   color: #fff;
   &:after {
     background-color: transparentize(#fff, 0.5);
+  }
+}
+
+.secondary-title-altbg {
+  color: $accent;
+  &:after {
+    background-color: transparentize($accent, 0.5);
   }
 }
 
