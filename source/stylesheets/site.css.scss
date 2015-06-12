@@ -61,7 +61,7 @@ a {
   .logo {
     display: block;
     width: 75%;
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
     margin: 0 auto;
   }
@@ -126,14 +126,20 @@ a {
     .stat-number {
       display: block;
       padding: 40px 0 0;
-      font-weight: 200;
+      font-weight: 100;
       font-size: 36px;
       line-height: 20px;
+      @media screen and (max-width: 767px) {
+        font-weight: 300;
+      }
     }
     .stat-unit {
       font-size: 12px;
-      font-weight: 200;
+      font-weight: 100;
       text-transform: uppercase;
+      @media screen and (max-width: 767px) {
+        font-weight: 300;
+      }
     }
   }
   .stat-two {
@@ -183,6 +189,7 @@ a {
       font-weight: 100;
       @media screen and (max-width: 767px) {
         font-size: 24px;
+        font-weight: 300;
       }
     }
     .route-segment-stat-gain-unit {
@@ -239,6 +246,9 @@ a {
   }
   th, td {
     padding: 3px;
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+    }
   }
   tbody > tr:nth-child(even) > td {
     background-color: darken($accent, 3%);
@@ -322,6 +332,12 @@ a {
     a {
       display: inline-block;
     }
+    img {
+      height: 150px;
+      @media screen and (max-width: 767px) {
+        height: 75px;
+      }
+    }
   }
 }
 
@@ -351,7 +367,6 @@ a {
 .section-parallax {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   text-align: center;
 }
@@ -412,7 +427,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.225em;
   text-align: center;
-  color: #999;
+  color: #777;
   &:after {
     content: "";
     display: block;
@@ -433,9 +448,8 @@ a {
 }
 
 .secondary-title-altbg {
-  color: darken($accent, 10%);
   &:after {
-    background-color: darken($accent, 10%);
+    background-color: darken(#dedede, 20%);
   }
 }
 
