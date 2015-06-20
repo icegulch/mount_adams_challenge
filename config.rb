@@ -70,3 +70,7 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+  activate :directory_indexes
+  page "*.pdf", :directory_index => false
+
