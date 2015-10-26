@@ -174,6 +174,9 @@
           The Results
         </h1>
         <table class="results-table">
+          <caption>
+            2015
+          </caption>
           <thead>
             <tr>
               <th>Date</th>
@@ -183,13 +186,45 @@
           </thead>
           <tbody>
             <%
-                results = data.results.sort_by {|result| result.date}
+                results = data.results2015.sort_by {|result| result.date}
                 results.each_slice(1) do |set|
             %>
               <tr>
                 <% set.each do |result| %>
                   <td>
-                    <%= result.date.strftime('%b %-d, %Y') %>
+                    <%= result.date.strftime('%b %-d') %>
+                  </td>
+                  <td>
+                    <%= result.first_name + ' ' + result.last_name %>
+                  </td>
+                  <td>
+                    <%= result.run_time %>
+                  </td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <table class="results-table">
+          <caption>
+            2014
+          </caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%
+                results = data.results2014.sort_by {|result| result.date}
+                results.each_slice(1) do |set|
+            %>
+              <tr>
+                <% set.each do |result| %>
+                  <td>
+                    <%= result.date.strftime('%b %-d') %>
                   </td>
                   <td>
                     <%= result.first_name + ' ' + result.last_name %>

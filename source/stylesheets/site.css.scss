@@ -237,7 +237,7 @@ a {
 
 .results-table {
   width: 100%;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   text-align: left;
   color: #fff;
   th {
@@ -252,6 +252,10 @@ a {
   }
   tbody > tr:nth-child(even) > td {
     background-color: darken($accent, 3%);
+  }
+  caption {
+    padding-bottom: 10px;
+    font-weight: 700;
   }
 }
 
