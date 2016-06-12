@@ -249,11 +249,15 @@ a {
     @media screen and (max-width: 767px) {
       font-size: 13px;
     }
+    &:first-child, &:last-child {
+      width: 16%;
+    }
   }
   tbody > tr:nth-child(even) > td {
     background-color: darken($accent, 3%);
   }
   caption {
+    text-align: center;
     padding-bottom: 10px;
     font-weight: 700;
   }
