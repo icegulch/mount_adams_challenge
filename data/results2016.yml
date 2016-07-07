@@ -16,27 +16,27 @@
   first_name: David
   date: 2016-06-19
   run_time: "1:54:11"
-  
+
 -
   last_name: Sandham 
   first_name: David
   date: 2016-06-19
   run_time: "1:54:11"
-  
+
 -
   last_name: Lane 
   first_name: Jeff
   date: 2016-06-25
   run_time: "1:57:19"
-  
+
 -
   last_name: Gordon 
   first_name: Scott
   date: 2016-06-30
   run_time: "1:55:37"
-  
-  -
-  last_name: O'Dell 
+
+-
+  last_name: "O'Dell" 
   first_name: Leslie
   date: 2016-06-30
   run_time: "1:55:00"
