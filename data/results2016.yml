@@ -81,13 +81,13 @@
   last_name: Bargado
   first_name: Tony
   date: 2016-08-06
-  run_time: 1:58:30
+  run_time: "1:58:30"
   
 -
   last_name:  Welts
   first_name: Ryan
   date: 2016-08-06
-  run_time: 1:58:00
+  run_time: "1:58:00"
   
 -
   last_name: Krol
