@@ -76,3 +76,21 @@
   first_name: Cathleen
   date: 2016-07-30
   run_time: "2:00:37"
+
+-
+  last_name: Bargado
+  first_name: Tony
+  date: 2016-08-06
+  run_time: 1:58:30
+  
+-
+  last_name:  Welts
+  first_name: Ryan
+  date: 2016-08-06
+  run_time: 1:58:00
+  
+-
+  last_name: Krol
+  first_name: John Paul
+  date: 2016-08-09
+  run_time: "1:29:00"
