@@ -2,7 +2,7 @@
   name: Valley Way
   distance: 0.9
   grade: 12
-  gain: 594
+  elevation_difference: 594
   gain_positive: true
   description: |
     Start with one hand on the kiosk at Appalachia. Set a stop watch to zero and start it running! Run up Valley Way to the junction with Brookside. Turn left on Brookside.
@@ -10,7 +10,7 @@
   name: Brookside
   distance: 1.7
   grade: 15
-  gain: 1350
+  elevation_difference: 1350
   gain_positive: true
   description: |
     Run Brookside to Watson Path, turn right on Watson Path. Watch for this turn very closely. It comes in at a shallow angle and is easy to miss!
@@ -18,7 +18,7 @@
   name: Watson
   distance: 0.2
   grade: 0
-  gain: 50
+  elevation_difference: 50
   gain_positive: false
   description: |
     Run Watson Path, cross Valley Way, and run the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead on Scar Trail.
@@ -26,7 +26,7 @@
   name: Scar
   distance: 0.6
   grade: 16
-  gain: 500
+  elevation_difference: 500
   gain_positive: true
   description: |
     Run Scar Trail to Air Line, turn left on Air Line.
@@ -34,7 +34,7 @@
   name: Airline
   distance: 1.2
   grade: 23
-  gain: 1425
+  elevation_difference: 1425
   gain_positive: true
   description: |
     Run Air Line to Gulfside. Turn right onto Gulfside.
@@ -42,7 +42,7 @@
   name: Gulfside
   distance: 0.6
   grade: 12
-  gain: 365
+  elevation_difference: 365
   gain_positive: true
   description: |
     Run Gulfside to Thunderstorm Junction. Turn left onto Lowe's Path.
@@ -50,7 +50,7 @@
   name: Lowe's Path
   distance: 0.2
   grade: 29
-  gain: 303
+  elevation_difference: 303
   gain_positive: true
   description: |
     Run Lowe's Path to the summit of Adams. Touch the sign. Turn off your stop watch. Snap a photo with the time on your watch showing, and the Mount Adams summit sign.

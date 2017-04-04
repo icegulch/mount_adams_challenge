@@ -80,6 +80,3 @@ end
   page "*.pdf", :directory_index => false
 
 
-activate :dato, live_reload: true
-
-

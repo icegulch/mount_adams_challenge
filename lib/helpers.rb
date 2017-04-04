@@ -1,12 +1,9 @@
 module SiteHelpers
 
   def results_by_year
-    dato.results.reverse.group_by { |r| r.date.year }
+    data.results.group_by { |r| r.date.year }
   end
 
-  def ordered_trail_segments
-    dato.trails.sort_by { |t| t.order }
-  end
 
 # TAKEN FROM RAILS API DOCS
   def link_to_unless(condition, name, options = {}, html_options = {}, &block)

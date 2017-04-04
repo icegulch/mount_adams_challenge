@@ -94,10 +94,10 @@
             The Mount Adams Challenge route follows seven trails:
           </p>
           <ol class="route-segments">
-            <% ordered_trail_segments.each do |segment| %>
+            <% data.trail_segments.each_with_index do |segment,i| %>
               <li class="route-segment">
                 <header class="route-segment-header">
-                  <%= segment.order %>. <%= segment.name %>
+                  <%= (i+1).to_s %>. <%= segment.name %>
                 </header>
                 <table class="route-segment-stats">
                   <tr>
@@ -120,7 +120,7 @@
                       </span>
                     </td>
                     <td class="route-segment-stat route-segment-stat-gain">
-                      <%= image_tag(segment.loss ? 'route-segment-gain-minus.png' : 'route-segment-gain.png', :width => '50px') %>
+                      <%= image_tag(segment.gain_positive ? 'route-segment-gain.png' : 'route-segment-gain-minus.png', :width => '50px') %>
                       <span class="route-segment-stat-gain-figure">
                         <%= segment.elevation_difference %>
                       </span>
@@ -185,10 +185,10 @@
         <h1 class="secondary-title secondary-title-darkbg">
           The Results
         </h1>
-        <% results_by_year.each do |year| %>
+        <% results_by_year.each do |year, results| %>
           <table class="results-table">
             <caption>
-              <%= year[0] %> <%#= year[1].count %>
+              <%= year %> <%#= year[1].count %>
             </caption>
             <thead>
               <tr>
@@ -199,7 +199,7 @@
             </thead>
             <tbody>
               <%
-                  sorted_year = year[1].sort_by { |d| d.date }.reverse
+                  sorted_year = results.sort_by { |d| d.date }.reverse
                   sorted_year.each do |result|
               %>
                 <tr>
