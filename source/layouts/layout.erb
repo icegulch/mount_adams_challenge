@@ -9,7 +9,7 @@
     <%= favicon_tag '/images/favicon.ico' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:100,300,700,900|Lato:100,300,300italic,700', 'site' %>
     <%= yield_content :style %>
-    <%= javascript_include_tag 'modernizr-2.7.1.min.js', 'application' %>
+    <%= javascript_include_tag 'modernizr-2.7.1.min', 'jquery', 'waypoints' %>
   </head>
 
   <body class="<%= page_classes %>">

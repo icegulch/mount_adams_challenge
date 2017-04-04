@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.7"
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-livereload'
+gem 'middleman-minify-html', '~>3.4.1'
 
-gem "bitballoon"
+gem "middleman-dato"
+

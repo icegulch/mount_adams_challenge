@@ -40,6 +40,11 @@
 #   activate :livereload
 # end
 
+#
+
+  require 'lib/helpers'
+  helpers SiteHelpers
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -73,4 +78,8 @@ end
 
   activate :directory_indexes
   page "*.pdf", :directory_index => false
+
+
+activate :dato, live_reload: true
+
 

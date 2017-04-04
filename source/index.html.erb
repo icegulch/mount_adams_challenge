@@ -1,4 +1,16 @@
 
+<% content_for :script do %>
+  <script>
+    jQuery(document).ready(function() {
+      jQuery('.cta-button').addClass('bounce');
+      jQuery('.slide-left').waypoint(function() {
+        jQuery(this).toggleClass('in');
+        }, { offset: '70%' });
+
+    });
+  </script>
+<% end %>
+
   <section id="welcome" class="section section-table section-parallax">
     <div class="section-table-cell">
       <figure class="">
@@ -82,10 +94,10 @@
             The Mount Adams Challenge route follows seven trails:
           </p>
           <ol class="route-segments">
-            <% data.trail_segments.each_with_index do |segment,i| %>
+            <% ordered_trail_segments.each do |segment| %>
               <li class="route-segment">
                 <header class="route-segment-header">
-                  <%= (i+1).to_s %>. <%= segment.name %>
+                  <%= segment.order %>. <%= segment.name %>
                 </header>
                 <table class="route-segment-stats">
                   <tr>
@@ -108,9 +120,9 @@
                       </span>
                     </td>
                     <td class="route-segment-stat route-segment-stat-gain">
-                      <%= image_tag(segment.gain_positive ? 'route-segment-gain.png' : 'route-segment-gain-minus.png', :width => '50px') %>
+                      <%= image_tag(segment.loss ? 'route-segment-gain-minus.png' : 'route-segment-gain.png', :width => '50px') %>
                       <span class="route-segment-stat-gain-figure">
-                        <%= segment.gain %>
+                        <%= segment.elevation_difference %>
                       </span>
                       <span class="route-segment-stat-gain-unit">
                         feet
@@ -173,24 +185,24 @@
         <h1 class="secondary-title secondary-title-darkbg">
           The Results
         </h1>
-        <table class="results-table">
-          <caption>
-            2016
-          </caption>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Name</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <%
-                results = data.results2016.sort_by {|result| result.date}
-                results.each_slice(1) do |set|
-            %>
+        <% results_by_year.each do |year| %>
+          <table class="results-table">
+            <caption>
+              <%= year[0] %> <%#= year[1].count %>
+            </caption>
+            <thead>
               <tr>
-                <% set.each do |result| %>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%
+                  sorted_year = year[1].sort_by { |d| d.date }.reverse
+                  sorted_year.each do |result|
+              %>
+                <tr>
                   <td>
                     <%= result.date.strftime('%b %-d') %>
                   </td>
@@ -200,75 +212,11 @@
                   <td>
                     <%= result.run_time %>
                   </td>
-                <% end %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <table class="results-table">
-          <caption>
-            2015
-          </caption>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Name</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <%
-                results = data.results2015.sort_by {|result| result.date}
-                results.each_slice(1) do |set|
-            %>
-              <tr>
-                <% set.each do |result| %>
-                  <td>
-                    <%= result.date.strftime('%b %-d') %>
-                  </td>
-                  <td>
-                    <%= result.first_name + ' ' + result.last_name %>
-                  </td>
-                  <td>
-                    <%= result.run_time %>
-                  </td>
-                <% end %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-        <table class="results-table">
-          <caption>
-            2014
-          </caption>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Name</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <%
-                results = data.results2014.sort_by {|result| result.date}
-                results.each_slice(1) do |set|
-            %>
-              <tr>
-                <% set.each do |result| %>
-                  <td>
-                    <%= result.date.strftime('%b %-d') %>
-                  </td>
-                  <td>
-                    <%= result.first_name + ' ' + result.last_name %>
-                  </td>
-                  <td>
-                    <%= result.run_time %>
-                  </td>
-                <% end %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
         <aside class="alt-section-text">
           <p>
             Share your adventure on our <a href="http://adamschallenge.tumblr.com" target="_blank">blog</a>.
