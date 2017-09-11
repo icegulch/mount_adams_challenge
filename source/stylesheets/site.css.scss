@@ -1,17 +1,11 @@
 
-/*
-  *= require 'reset.css'
-*/
-
 @import
-  "variables",
-  "mixins",
-  "bootstrap";
-
+  "variables";
 
 // BASE
 
 body {
+  padding-top: 57px;
   font: 300 16px/1.65 lato, sans-serif;
   color: #666;
 }
@@ -34,30 +28,12 @@ a {
 }
 
 
-
-// STRUCTURE
-
-#site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background-color: #2f2f2f;
-}
-
-#site-main {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 100vh;
-  background-color: #fff;
-}
-
 // PAGE
 
 #welcome {
-  height: 100vh;
-  background-image: image-url("welcome.jpg");
+  max-height: 80vh;
+  background: transparent image-url("route.jpg") no-repeat 50% 50%;
+  background-size: cover;
   .logo {
     display: block;
     width: 75%;
@@ -65,32 +41,8 @@ a {
     height: auto;
     margin: 0 auto;
   }
-  .more-link {
-    margin: 50px 0 8px;
-    color: rgba(255,255,255, 0.6);
-    color: #fff\9;
-    font-weight: 300;
-    font-size: 13px;
-    font-style: italic;
-  }
-  .cta-button {
-    width: 30px;
-    height: 30px;
-    @include border-radius(30px);
-    margin: 0 auto;
-    background: $accent image-url('cta.png') no-repeat 50% 50%;
-    background-size: 17px 17px;
-  }
-  @media screen and (max-width: 767px) {
-    .more-link, .cta-button {
-      display: none;
-    }
-  }
 }
 
-#challenge {
-
-}
 
 .challenge-teaser {
   position: relative;
@@ -110,14 +62,15 @@ a {
   background-color: #f1f1f1;
   .route-stats {
     padding: 200px 0;
-    background-image: image-url('route.jpg');
+    background: transparent image-url('welcome.jpg') no-repeat 50% 0%;
+    background-size: cover;
   }
   .stat {
     display: inline-block;
     margin: 0 auto;
     width: 120px;
     height: 120px;
-    @include border-radius(120px);
+    border-radius: 120px;
     background-color: transparentize($accent, 0.2);
     color: #fff;
     + .stat {
@@ -154,12 +107,12 @@ a {
     padding: 80px 0 0;
   }
   .route-segments {
+    padding-left: 0;
     list-style: none;
   }
   .route-segment {
     margin-top: 30px;
     background-color: #fff;
-    @include box-shadow(0 0 5px #ccc);
     color: $accent;
   }
   .route-segment-stats {
@@ -211,9 +164,47 @@ a {
   margin-top: 50px;
 }
 
+#rules {
+  position: relative;
+  &:after {
+    content: " ";
+    display:block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:30px;
+    background: linear-gradient(-30deg, transparent 75%, #f1f1f1 75%) 0 50%,
+                linear-gradient( 30deg, transparent 75%, #f1f1f1 75%) 0 50%;
+    background-repeat: repeat-x;
+    background-size:30px 30px, 30px 30px;
+  }
+  .rules-columns {
+    margin: 40px 0 0;
+    text-align: left;
+    p + p {
+      margin-top: 0;
+    }
+    p {
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+    @media screen and (min-width: 992px) {
+      -webkit-columns: 2 200px;
+      -moz-columns: 2 200px;
+      columns: 2 200px;
+      -webkit-column-gap: 1.5em;
+      -moz-column-gap: 1.5em;
+      column-gap: 1.5em;
+      -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+      page-break-inside: avoid; /* Firefox */
+      break-inside: avoid; /* IE 10+ */
+    }
+  }
+}
+
 #results {
   position: relative;
-  margin-bottom: 100vh;
   text-align: center;
   background-color: $accent;
   &:before, &:after {
@@ -262,7 +253,9 @@ a {
   caption {
     text-align: center;
     padding-bottom: 10px;
+    color: #fff;
     font-weight: 700;
+    caption-side: top;
   }
 }
 
@@ -276,89 +269,18 @@ a {
   }
 }
 
-#rules {
-  position: relative;
-  &:after {
-    content: " ";
-    display:block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height:30px;
-    background: linear-gradient(-30deg, transparent 75%, #f1f1f1 75%) 0 50%,
-                linear-gradient( 30deg, transparent 75%, #f1f1f1 75%) 0 50%;
-    background-repeat: repeat-x;
-    background-size:30px 30px, 30px 30px;
-  }
-  .rules-columns {
-    margin: 40px 0 0;
-    text-align: left;
-    -webkit-columns: 2 200px;
-    -moz-columns: 2 200px;
-    columns: 2 200px;
-    -webkit-column-gap: 1.5em;
-    -moz-column-gap: 1.5em;
-    column-gap: 1.5em;
-    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-    page-break-inside: avoid; /* Firefox */
-    break-inside: avoid; /* IE 10+ */
-    p + p {
-      margin-top: 0;
-    }
-    p {
-      display: inline-block;
-      margin-bottom: 18px;
-    }
-  }
-}
-
 #sponsors {
-  min-height: 100vh;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  background: $accent image-url('point.jpg') no-repeat 50% 50%;
+  position: relative;
+  padding: 80px 15px;
+  background: transparent image-url('challenge.jpg') no-repeat 100% 0%;
   background-size: cover;
   color: #fff;
-  .content-footer {
-    display: table;
-    width: 100%;
-  }
-  .footer-container {
-    height: 100vh;
-    padding: 0 105px 15px 0;
-    display: table-cell;
-    vertical-align: bottom;
-    text-align: right;
-  }
-  .reward-sponsors {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    z-index: 4;
-    margin: -150px 0 0;
-    a {
-      display: inline-block;
-    }
-    img {
-      height: 150px;
-      @media screen and (max-width: 767px) {
-        height: 75px;
-      }
-    }
+  @media screen and (min-width: 768px) {
+    min-height: 70vh;
   }
 }
 
 // MODULES
-
-.site-nav-link {
-  display: inline-block;
-  font-size: 12px; 
-  text-transform: uppercase;
-}
 
 .section {
   padding: 80px 0;
@@ -367,19 +289,6 @@ a {
   p + p {
     margin-top: 18px;
   }
-}
-
-.section-table {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
-
-.section-parallax {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
 }
 
 .section-touch {
@@ -413,11 +322,6 @@ a {
 
 .section-alt {
   background-color: lighten($accent, 40%);
-}
-
-.section-table-cell {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .primary-title {
@@ -462,117 +366,5 @@ a {
   &:after {
     background-color: darken(#dedede, 20%);
   }
-}
-
-
-// ANIMATIONS
-
-// fades in/out content
-.fade {
-  opacity: 0;
-  @include transition(opacity, 1.5s, cubic-bezier(.10, .10, .25, .90));
-  &.in {
-    opacity: 1;
-  }
-}
-
-// slide in/out from either left or right
-.slide-right {
-  position: relative;
-  right: -100%;
-  @include transition(right, 0.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  &.in, .no-js &, .no-csstransitions & {
-    right: 0;
-  }
-  @media screen and (max-width: 767px) {
-    right: 0;
-  }
-}
-
-.slide-left {
-  position: relative;
-  left: -100%;
-  @include transition(left, 0.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  &.in, .no-js &, .no-csstransitions & {
-    left: 0;
-  }
-  @media screen and (max-width: 767px) {
-    left: 0
-  }
-}
-
-.scale {
-  @include transition(all, 0.5s, cubic-bezier(.10, .10, .25, .90), 0.5s);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  &.in, .no-js &, .no-csstransitions & {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-  @media screen and (max-width: 767px) {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
-.bounce {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-animation-iteration-count: 3;
-  -moz-animation-iteration-count: 3;
-  -ms-animation-iteration-count: 3;
-  -o-animation-iteration-count: 3;
-  animation-iteration-count: 3;
 }
 

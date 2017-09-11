@@ -1,32 +1,16 @@
 
-<% content_for :script do %>
-  <script>
-    jQuery(document).ready(function() {
-      jQuery('.cta-button').addClass('bounce');
-      jQuery('.slide-left').waypoint(function() {
-        jQuery(this).toggleClass('in');
-        }, { offset: '70%' });
 
-    });
-  </script>
-<% end %>
-
-  <section id="welcome" class="section section-table section-parallax">
-    <div class="section-table-cell">
+  <section id="welcome" class="section">
+    <div class="container">
       <figure class="">
         <%= image_tag "logo.svg", :class => 'logo' %>
-        <div class="more-link">
-          Scroll down for more info
-        </div>
-        <div class="cta-button">
-        </div>
       </figure>
     </div>
   </section>
 
   <section id="challenge" class="section section-special">
     <div class="container">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 offset-md-2">
         <h1 class="secondary-title secondary-title-darkbg">
           The Challenge
         </h1>
@@ -37,13 +21,9 @@
     </div>
   </section>
 
-  <figure class="section-touch section-touch-special">
-    <%= image_tag('challenge.jpg', :width => '100%') %>
-  </figure>
-
-  <section id="point" class="section">
+  <section id="point" class="section section-touch section-touch-special">
     <div class="container">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 offset-md-2">
         <h1 class="secondary-title">
           The Point
         </h1>
@@ -56,7 +36,7 @@
 
   <section id="reward" class="section section-alt section-touch">
     <div class="container">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 offset-md-2">
         <h1 class="secondary-title secondary-title-altbg">
           The Reward
         </h1>
@@ -68,7 +48,7 @@
   </section>
 
   <section id="route" class="section">
-    <figure class="route-stats section-parallax">
+    <figure class="route-stats">
       <figcaption>
         <div class="stat stat-one slide-left">
           <span class="stat-number">7</span>
@@ -84,9 +64,9 @@
         </div>
       </figcaption>
     </figure>
-    <article class="section-content">
+    <section class="section-content">
       <div class="container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
           <h1 class="secondary-title">
             The Route
           </h1>
@@ -143,12 +123,12 @@
           </div>
         </div>
       </div>
-    </article>
+    </section>
   </section>
 
   <section id="rules" class="section">
     <div class="container">
-      <article class="col-md-10 col-md-offset-1">
+      <article class="col-md-10 offset-md-1">
         <h1 class="secondary-title">
           The Rules
         </h1>
@@ -184,7 +164,7 @@
 
   <section id="results" class="section section-alt">
     <div class="container">
-      <article class="col-md-8 col-md-offset-2">
+      <article class="col-md-8 offset-md-2">
         <h1 class="secondary-title secondary-title-darkbg">
           The Results
         </h1>
