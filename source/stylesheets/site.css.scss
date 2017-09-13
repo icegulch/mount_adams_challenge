@@ -5,7 +5,6 @@
 // BASE
 
 body {
-  padding-top: 57px;
   font: 300 16px/1.65 lato, sans-serif;
   color: #666;
 }
@@ -321,7 +320,7 @@ a {
 
 .section-xtra {
   @media screen and (min-width: 768px) {
-    padding-top: 150px;
+    padding-top: 207px;
     padding-bottom: 150px;
   }
 }
@@ -372,5 +371,22 @@ a {
   &:after {
     background-color: darken(#dedede, 20%);
   }
+}
+
+.bg-inverse {
+  background-color: rgba(0,0,0, 0.5) !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+  color: rgba(255,255,255, 0.75);
+  &:focus, &:hover {
+    color: #fff;    
+  }
+}
+
+.navbar-brand {
+  font-family: Raleway, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
 }
 
