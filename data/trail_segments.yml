@@ -21,11 +21,11 @@
   elevation_difference: 50
   gain_positive: false
   description: |
-    Run Watson Path, cross Valley Way, and run the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead on Scar Trail.
+    Run Watson Path, cross Valley Way in 0.2mi, and run the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead on Scar Trail.
 -
   name: Scar
   distance: 0.7
-  grade: 16
+  grade: 14
   elevation_difference: 500
   gain_positive: true
   description: |
