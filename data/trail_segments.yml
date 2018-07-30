@@ -18,7 +18,7 @@
   name: Watson
   distance: 0.3
   grade: 0
-  elevation_difference: 50
+  elevation_difference: 75
   gain_positive: false
   description: |
     Run Watson Path, cross Valley Way in 0.2mi, and run the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead on Scar Trail.
@@ -26,7 +26,7 @@
   name: Scar
   distance: 0.7
   grade: 14
-  elevation_difference: 500
+  elevation_difference: 525
   gain_positive: true
   description: |
     Run Scar Trail to Air Line, turn left on Air Line.
@@ -50,7 +50,7 @@
   name: Lowe's Path
   distance: 0.2
   grade: 29
-  elevation_difference: 303
+  elevation_difference: 309
   gain_positive: true
   description: |
     Run Lowe's Path to the summit of Adams. Touch the sign. Turn off your stop watch. Snap a photo with the time on your watch showing, and the Mount Adams summit sign.
