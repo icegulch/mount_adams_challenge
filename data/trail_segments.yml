@@ -13,7 +13,7 @@
   elevation_difference: 1350
   gain_positive: true
   description: |
-    Run Brookside to Watson Path, turn right on Watson Path. Watch for this turn very closely. It comes in at a shallow angle and is easy to miss!
+    Run Brookside to Watson Path, turn right on Watson Path and run Watson Path for 0.1 to Valley Way. Watch for the turn off Brookside to Watson Path very closely. It comes in at a shallow angle and is very easy to miss!
 -
   name: Watson
   distance: 0.3
@@ -21,7 +21,7 @@
   elevation_difference: 75
   gain_positive: false
   description: |
-    Run Watson Path, cross Valley Way in 0.2mi, and run the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead on Scar Trail.
+    Now continue on Watson Path for another 0.2mi, running the faint, short section of Watson Path to Scar Trail. Be careful to stay on the trail here. The tread way is faint for about 200 yards. Continue straight ahead until you reach Scar Trail.
 -
   name: Scar
   distance: 0.7
