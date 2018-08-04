@@ -397,3 +397,44 @@
   first_name: Doug
   date: 2018-06-09
   run_time: "2:01:58"
+-
+  last_name: Watson
+  first_name: Christopher
+  date: 2018-06-22
+  run_time: "1:57:48"
+
+-
+  last_name: Weathers
+  first_name: Nora
+  date: 2018-06-22
+  run_time: "1:57:24"
+
+-
+  last_name: Eseppi
+  first_name: Eddie
+  date: 2018-07-01
+  run_time: "2:05:43"
+
+-
+  last_name: Lane
+  first_name: Brian
+  date: 2018-06-30
+  run_time: "1:51:07"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  date: 2018-07-21
+  run_time: "1:52:54"
+
+-
+  last_name: Gibbs
+  first_name: Ryan
+  date: 2018-07-29
+  run_time: "1:28:12"
+
+-
+  last_name: Gallagher
+  first_name: Rob
+  date: 2018-07-31
+  run_time: "1:42:43"
