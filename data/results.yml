@@ -440,7 +440,19 @@
   run_time: "1:42:43"
 
 -
+  last_name: Alex
+  first_name: Leich
+  date: 2018-08-06
+  run_time: "1:28:10"
+
+-
   last_name: Isabella
   first_name: Franz
   date: 2018-06-22
   run_time: "1:57:51"
+
+-
+  last_name: O'Dell
+  first_name: Leslie
+  date: 2018-08-07
+  run_time: "1:46:17"
