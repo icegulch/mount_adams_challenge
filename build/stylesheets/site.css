@@ -13,6 +13,7 @@ a {
 @media screen and (max-width: 767px) {
   .container {
     padding: 0; } }
+
 #welcome {
   background: transparent url("../images/welcome.jpg") no-repeat 50% 0%;
   background-size: cover; }
