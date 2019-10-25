@@ -112,6 +112,3 @@ DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-livereload
   middleman-minify-html (~> 3.4.1)
-
-BUNDLED WITH
-   1.17.2
