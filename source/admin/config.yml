@@ -1,20 +1,24 @@
 backend:
   name: git-gateway
 
+media_folder: source/images/
+public_folder: /images/
+
 site_url: https://www.mountadamschallenge.org/
 display_url: https://www.mountadamschallenge.org/
 show_preview_links: false
 
 collections:
   #yaml middleman data example
-  - name: results
-    label: Results
-    format: yml
-    extension: yml
-    file: data/results.yml
-    create: false
-    fields:
-      - {label: Last Name, name: last_name, widget: string, required: true}
-      - {label: First Name, name: first_name, widget: string, required: true}
-      - {label: Run Date, name: date, widget: datetime}
-      - {label: Run Time, name: run_time, widget: string}
+  - name: settings
+    label: Settings
+    files:
+    - file: data/settings/results.yml
+      label: Results
+      name: results
+      widget: list
+      fields:
+        - {label: Last Name, name: last_name, widget: string, required: true}
+        - {label: First Name, name: first_name, widget: string, required: true}
+        - {label: Run Date, name: date, widget: datetime}
+        - {label: Run Time, name: run_time, widget: string}
