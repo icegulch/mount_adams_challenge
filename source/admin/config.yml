@@ -13,6 +13,7 @@ collections:
   - name: results
     label: Results
     label_singular: Result
+    identifier_field: name
     format: yml
     extension: yml
     folder: data/results
