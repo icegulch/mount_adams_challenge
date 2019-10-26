@@ -1,0 +1,512 @@
+
+-
+  last_name: Monier
+  first_name: Aaron
+  run_date: 2019-08-02
+  run_time: "2:04:30"
+
+-
+  last_name: Fitzgerald
+  first_name: Brian
+  run_date: 2018-08-31
+  run_time: "1:50:49"
+
+-
+  last_name: Fitzgerald
+  first_name: Brian
+  run_date: 2019-07-22
+  run_time: "1:56:38"
+
+-
+  last_name: Burakian
+  first_name: Eli
+  run_date: 2019-06-29
+  run_time: "1:57:00"
+
+-
+  last_name: Ofsevit
+  first_name: Ari
+  run_date: 2019-06-12
+  run_time: "2:00:37"
+
+-
+  last_name: Boucher
+  first_name: Rémi
+  run_date: 2017-10-19
+  run_time: "1:57:51"
+
+-
+  last_name: Ouimet
+  first_name: Camille-Antoine
+  run_date: 2017-10-19
+  run_time: "1:57:51"
+
+-
+  last_name: Dubois-Verret
+  first_name: Melina
+  run_date: 2017-10-19
+  run_time: "1:57:51"
+
+-
+  last_name: Ofsevit
+  first_name: Ari
+  run_date: 2017-10-14
+  run_time: "2:04:24"
+
+-
+  last_name: Gallagher
+  first_name: Rob
+  run_date: 2017-09-30
+  run_time: "1:59:16"
+
+-
+  last_name: Quigley
+  first_name: Brian
+  run_date: 2017-09-30
+  run_time: "1:49:43"
+
+-
+  last_name: Zimmerman
+  first_name: Dave
+  run_date: 2017-09-23
+  run_time: "2:00:33"
+
+-
+  last_name: Kamman
+  first_name: Rowan
+  run_date: 2017-09-23
+  run_time: "1:25:47"
+
+-
+  last_name: Leoni
+  first_name: Ben
+  run_date: 2017-09-10
+  run_time: "1:46:25"
+
+-
+  last_name: Trail
+  first_name: Brent
+  run_date: 2017-09-02
+  run_time: "1:23:43"
+
+-
+  last_name: Walsh
+  first_name: Brooks
+  run_date: 2017-08-26
+  run_time: "2:11:41"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  run_date: 2017-07-05
+  run_time: "2:04:24"
+
+-
+  last_name: Fitzgerald
+  first_name: Brian
+  run_date: 2017-07-03
+  run_time: "2:04:36"
+
+-
+  last_name: Kamman
+  first_name: Rowan
+  run_date: 2016-06-04
+  run_time: "1:35:24"
+
+-
+  last_name: Blanck
+  first_name: Ticia
+  run_date: 2016-06-11
+  run_time: "2:08:18"
+
+-
+  last_name: Loutzenheiser
+  first_name: David
+  run_date: 2016-06-19
+  run_time: "1:54:11"
+
+-
+  last_name: Sandham 
+  first_name: David
+  run_date: 2016-06-19
+  run_time: "1:54:11"
+
+-
+  last_name: Lane 
+  first_name: Jeff
+  run_date: 2016-06-25
+  run_time: "1:57:19"
+
+-
+  last_name: Gordon 
+  first_name: Scott
+  run_date: 2016-06-30
+  run_time: "1:55:37"
+
+-
+  last_name: "O'Dell" 
+  first_name: Leslie
+  run_date: 2016-06-30
+  run_time: "1:55:19"
+
+-
+  last_name: Eckel 
+  first_name: Alton
+  run_date: 2016-07-14
+  run_time: "2:00:55"
+
+-
+  last_name: Ward 
+  first_name: Jeremy
+  run_date: 2016-07-14
+  run_time: "2:00:55"
+
+-
+  last_name: Germain
+  first_name: Caitlyn
+  run_date: 2016-07-17
+  run_time: "1:59:41"
+
+-
+  last_name: Germain 
+  first_name: Matthew
+  run_date: 2016-07-17
+  run_time: "1:59:41"
+
+-
+  last_name: Monier 
+  first_name: Aaron
+  run_date: 2016-07-28
+  run_time: "1:52:33"
+
+-
+  last_name: Balantic 
+  first_name: Cathleen
+  run_date: 2016-07-30
+  run_time: "2:00:37"
+
+-
+  last_name: Bargado
+  first_name: Tony
+  run_date: 2016-08-06
+  run_time: "1:58:30"
+  
+-
+  last_name:  Welts
+  first_name: Ryan
+  run_date: 2016-08-06
+  run_time: "1:58:00"
+  
+-
+  last_name: Krol
+  first_name: John Paul
+  run_date: 2016-08-09
+  run_time: "1:29:22"
+  
+-
+  last_name: Eusden
+  first_name: Spencer
+  run_date: 2016-08-16
+  run_time: "1:29:27"
+  
+-
+  last_name: Legg
+  first_name: Kyle
+  run_date: 2016-08-20
+  run_time: "1:58:00"
+  
+-
+  last_name: McLane
+  first_name: Ryman
+  run_date: 2016-08-23
+  run_time: "1:49:19"
+
+-
+  last_name: Trail
+  first_name: Brent
+  run_date: 2016-09-09
+  run_time: "1:24:33"
+
+-
+  last_name: Colt
+  first_name: Jeff
+  run_date: 2016-09-27
+  run_time: "1:20:37"
+
+
+
+-
+  last_name: Kernytsky
+  first_name: Andy
+  run_date: 2015-06-04
+  run_time: "2:02:00"
+
+-
+  last_name: Marks
+  first_name: Kevin
+  run_date: 2015-06-04
+  run_time: "2:02:00"
+
+-
+  last_name: Hixon
+  first_name: Jeff
+  run_date: 2015-06-04
+  run_time: "2:02:00"
+
+-
+  last_name: Arnold
+  first_name: Jerimy
+  run_date: 2015-06-06
+  run_time: "1:35:08"
+-
+  last_name: Kruschwitz
+  first_name: Dave
+  run_date: 2015-06-24
+  run_time: "2:07:32"
+
+-
+  last_name: Pelchat
+  first_name: Mike
+  run_date: 2015-06-27
+  run_time: "1:43:28"
+
+-
+  last_name: Rives
+  first_name: Rob
+  run_date: 2015-07-05
+  run_time: "1:31:56"
+
+-
+  last_name: Chouinard
+  first_name: Myles
+  run_date: 2015-06-13
+  run_time: "2:08:00"
+
+-
+  last_name: Lewis
+  first_name: Doug
+  run_date: 2015-08-29
+  run_time: "1:43:00"
+
+-
+  last_name: Brockett
+  first_name: Laura
+  run_date: 2015-08-29
+  run_time: "2:08:00"
+
+-
+  last_name: Brockett
+  first_name: Pete
+  run_date: 2015-08-29
+  run_time: "2:07:00"
+
+-
+  last_name: Griesshammer
+  first_name: Johannes
+  run_date: 2015-09-05
+  run_time: "2:08:30"
+
+-
+  last_name: Arsenault
+  first_name: Mike
+  run_date: 2015-09-06
+  run_time: "1:58:34"
+
+-
+  last_name: Reynolds
+  first_name: Tobey
+  run_date: 2015-09-06
+  run_time: "1:58:34"
+
+-
+  last_name: Beaudoin
+  first_name: Pierre
+  run_date: 2015-09-12
+  run_time: "1:58:51"
+
+-
+  last_name: Colt
+  first_name: Jeff
+  run_date: 2015-09-20
+  run_time: "1:34:30"
+
+-
+  last_name: Damby
+  first_name: Katie
+  run_date: 2015-09-26
+  run_time: "1:55:46"
+
+-
+  last_name: Taylor
+  first_name: Ben
+  run_date: 2015-09-27
+  run_time: "1:47:16"
+
+-
+  last_name: King
+  first_name: Michael
+  run_date: 2015-10-24
+  run_time: "1:51:00"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  run_date: 2015-06-15
+  run_time: "1:59:05"
+
+
+
+-
+  last_name: Ofsevit
+  first_name: Ari
+  run_date: 2014-07-06
+  run_time: "1:49:06"
+
+-
+  last_name: Marion
+  first_name: Jess
+  run_date: 2014-07-08
+  run_time: "1:46:00"
+
+-
+  last_name: Benedict
+  first_name: Lincoln
+  run_date: 2014-07-08
+  run_time: "1:49:00"
+
+-
+  last_name: Bersvendsen
+  first_name: Odd
+  run_date: 2014-06-10
+  run_time: "1:48:37"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  run_date: 2014-07-14
+  run_time: "2:05:22"
+
+-
+  last_name: Cargill
+  first_name: Jordan
+  run_date: 2014-07-19
+  run_time: "1:27:42"
+
+-
+  last_name: Hart
+  first_name: Leah
+  run_date: 2014-07-22
+  run_time: "1:44:58"
+
+-
+  last_name: Maddock
+  first_name: Jim
+  run_date: 2014-08-24
+  run_time: "1:29:14"
+
+-
+  last_name: Gunn
+  first_name: Charlie
+  run_date: 2014-08-29
+  run_time: "1:47:04"
+
+-
+  last_name: Mayer
+  first_name: Doug
+  run_date: 2014-10-06
+  run_time: "1:45:58"
+
+-
+  last_name: Nappi
+  first_name: Todd
+  run_date: 2018-06-09
+  run_time: "2:13:31"
+
+-
+  last_name: Mayer
+  first_name: Doug
+  run_date: 2018-06-09
+  run_time: "2:01:58"
+-
+  last_name: Watson
+  first_name: Christopher
+  run_date: 2018-06-22
+  run_time: "1:57:48"
+
+-
+  last_name: Weathers
+  first_name: Nora
+  run_date: 2018-06-22
+  run_time: "1:57:24"
+
+-
+  last_name: Eseppi
+  first_name: Eddie
+  run_date: 2018-07-01
+  run_time: "2:05:43"
+
+-
+  last_name: Lane
+  first_name: Brian
+  run_date: 2018-06-30
+  run_time: "1:51:07"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  run_date: 2018-07-21
+  run_time: "1:52:54"
+
+-
+  last_name: Gibbs
+  first_name: Ryan
+  run_date: 2018-07-29
+  run_time: "1:28:12"
+
+-
+  last_name: Gallagher
+  first_name: Rob
+  run_date: 2018-07-31
+  run_time: "1:42:43"
+
+-
+  last_name: Alex
+  first_name: Leich
+  run_date: 2018-08-06
+  run_time: "1:28:10"
+
+-
+  last_name: Franz
+  first_name: Isabella
+  run_date: 2018-06-22
+  run_time: "1:57:51"
+
+-
+  last_name: O'Dell
+  first_name: Leslie
+  run_date: 2018-08-07
+  run_time: "1:46:17"
+  
+-
+  last_name: Lawrie
+  first_name: Christopher
+  run_date: 2018-08-25
+  run_time: "1:48:48"
+  
+-
+  last_name: Pullen
+  first_name: Ashley
+  run_date: 2018-08-25
+  run_time: "2:05:11"
+
+-
+  last_name: Kamman
+  first_name: Rowan
+  run_date: 2018-09-27
+  run_time: "1:46:14"
+
+-
+  last_name: Gordon
+  first_name: Scott
+  run_date: 2019-09-14
+  run_time: "2:02:48"

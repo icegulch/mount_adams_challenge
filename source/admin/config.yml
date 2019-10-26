@@ -10,15 +10,15 @@ show_preview_links: false
 
 collections:
   #yaml middleman data example
-  - name: settings
-    label: Settings
-    files:
-    - file: data/settings/results.yml
-      label: Results
-      name: results
-      widget: list
-      fields:
-        - {label: Last Name, name: last_name, widget: string, required: true}
-        - {label: First Name, name: first_name, widget: string, required: true}
-        - {label: Run Date, name: date, widget: datetime}
-        - {label: Run Time, name: run_time, widget: string}
+  - name: results
+    label: Results
+    format: yml
+    extension: yml
+    folder: data/results
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{last_name}}'
+    fields:
+      - {label: Last Name, name: last_name, widget: string, required: true}
+      - {label: First Name, name: first_name, widget: string, required: true}
+      - {label: Run Date, name: date, widget: datetime}
+      - {label: Run Time, name: run_time, widget: string}

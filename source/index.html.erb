@@ -182,12 +182,12 @@
             </thead>
             <tbody>
               <%
-                  sorted_year = results.sort_by { |d| d.date }.reverse
+                  sorted_year = results.sort_by { |d| d.run_date }.reverse
                   sorted_year.each do |result|
               %>
                 <tr>
                   <td>
-                    <%= result.date.strftime('%b %-d') %>
+                    <%= result.run_date.strftime('%b %-d') %>
                   </td>
                   <td>
                     <%= result.first_name + ' ' + result.last_name %>
