@@ -10,8 +10,9 @@ show_preview_links: false
 
 collections:
   #yaml middleman data example
-  - name: result
-    label: Result
+  - name: results
+    label: Results
+    label_singular: Result
     format: yml
     extension: yml
     folder: data/results
