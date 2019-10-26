@@ -22,6 +22,6 @@ collections:
     fields:
       - {label: Last Name, name: last_name, widget: string, required: true}
       - {label: First Name, name: first_name, widget: string, required: true}
-      - {label: Run Date, name: run_date, widget: datetime}
-      - {label: Run Time, name: run_time, widget: string}
+      - {label: Run Date, name: run_date, widget: datetime, required: true}
+      - {label: Run Time, name: run_time, widget: string, default: "2:09:59", required: true}
     summary: "{{run_date}} - {{last_name}}"
