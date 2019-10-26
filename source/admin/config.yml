@@ -23,3 +23,4 @@ collections:
       - {label: First Name, name: first_name, widget: string, required: true}
       - {label: Run Date, name: date, widget: datetime}
       - {label: Run Time, name: run_time, widget: string}
+    summary: "{{year}} - {{last_name}}"
