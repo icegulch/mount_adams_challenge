@@ -78,5 +78,6 @@ end
 
   activate :directory_indexes
   page "*.pdf", :directory_index => false
+  page "/admin/*", layout: false
 
 
