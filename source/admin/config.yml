@@ -13,7 +13,7 @@ collections:
   - name: results
     label: Results
     label_singular: Result
-    identifier_field: name
+    identifier_field: "{{year}}-{{last_name}}"
     format: yml
     extension: yml
     folder: data/results
