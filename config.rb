@@ -40,6 +40,11 @@ configure :development do
   activate :livereload
 end
 
+# DatoCMS
+activate :dato,
+  token: '39a299371fd965b45275021398c1c9',
+  base_url: 'https://www.mountadamschallenge.org/'
+
 #
 
   require 'lib/helpers'
