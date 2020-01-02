@@ -5,6 +5,11 @@ module SiteHelpers
     dato.results.group_by { |r| r.run_date.year }.sort.reverse
   end
 
+  def markdownify(text)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(text)
+  end
+
 
 # TAKEN FROM RAILS API DOCS
   def link_to_unless(condition, name, options = {}, html_options = {}, &block)
