@@ -16,3 +16,6 @@
 
 # Ignore netlify
 .netlify
+
+# Ignore
+.env

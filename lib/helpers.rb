@@ -2,7 +2,7 @@ module SiteHelpers
 
 
   def results_by_year
-    data.results.group_by { |r| r.run_date.year }.sort.reverse
+    dato.results.group_by { |r| r.run_date.year }.sort.reverse
   end
 
 
