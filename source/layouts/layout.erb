@@ -3,28 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mount Adams Challenge</title>
-    <meta name="description" content="The Mount Adams challenge is an entirely informal event, to be undertaken by individuals who are looking for a personal challenge, and purely for their own satisfaction.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= favicon_tag '/images/favicon.ico' %>
-    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', '//fonts.googleapis.com/css?family=Raleway:900|Lato:100,300,300italic,700', 'site' %>
+    <%=
+      content_tag(:title,
+        case yield_content(:title) || current_page.data.title
+        when nil then 'Mount Adams Challenge'
+        else (yield_content(:title) || current_page.data.title) + ' | Mount Adams Challenge'
+        end
+        )
+    %>
+    <%= yield_content :head %>
+    <%= dato_favicon_meta_tags %>
+    <%= stylesheet_link_tag 'site' %>
     <%= yield_content :style %>
-    <%= javascript_include_tag '//code.jquery.com/jquery-3.1.1.slim.min.js', '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'  %>
   </head>
 
   <body class="<%= page_classes %>">
 
-    <header id="site-header" role="banner">
-      <%= partial "layouts/header" %>
+    <header class="site-header" role="banner">
+      <h1 class="site-header__brand" href="/">
+        <%= link_to('Mount Adams Challenge', '/') %>
+      </h1>
+      <nav class="site-header__links">
+        <%= nav_link "Route", "/route/", class: "site-nav-link" %>
+        <%= nav_link "Results", "/results/", class: "site-nav-link" %>
+        <%= nav_link "Reports", "/reports/", class: "site-nav-link" %>
+      </nav>
     </header>
 
-    <main id="site-main" role="main">
+    <main class="site-main" role="main">
       <%= yield %>
     </main>
 
-    <footer id="sponsors" role="contentinfo">
-      <%= partial "layouts/footer" %>
-    </footer>
+    <%= yield_content :script %>
 
   </body>
 </html>

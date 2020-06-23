@@ -1,0 +1,19 @@
+---
+  title: Trip Reports
+---
+
+<section class="section section--lightgray">
+    <ul class="report-cards">
+      <% dato.reports.each do |report| %>
+          <li class="card">
+            <a href="/reports/<%= report.slug %>">
+              <%= image_tag(report.teaser_image.url(h: 350, w: 420, fit: 'facearea', facepad: 10)) %>
+              <div>
+                <%= content_tag(:h3, report.title) %>
+                <%= content_tag(:time, report.date.strftime("%B %e, %Y")) %>
+              </div>
+            </a>
+          </li>
+      <% end %>
+    </ul>
+</section>

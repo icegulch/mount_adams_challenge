@@ -1,0 +1,60 @@
+
+<% content_for(:title) do %>
+  <%= report.title %>
+<% end %>
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(report) %>
+<% end %>
+
+
+
+<section class="section section--lightgray">
+
+    <article class="trip-report">
+        <% report.content.each do |record| %>
+          <% if record.item_type.api_key == "image" %>
+            <div class="gallery">
+              <% record.images.each do |image| %>
+                <img src="<%= image.url() %>" alt="<%= image.alt %>" title="<%= image.title %>" class="img-fluid" />
+              <% end %>
+            </div>
+          <% elsif record.item_type.api_key == "video" %>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe id="ytplayer" type="text/html" width="<%= record.video.width %>" height="<%= record.video.height %>"
+      src="https://www.youtube.com/embed/<%= record.video.provider_uid %>?autoplay=1"
+      frameborder="0"></iframe>
+            </div>
+          <% end %>
+        <% end %>
+    </article>
+</section>
+
+<section class="section">
+    <h1>
+      <%= report.title %>
+    </h1>
+    <time>
+      <%= report.date.strftime("%B %e, %Y") %>
+    </time>
+      <% report.content.each do |record| %>
+        <% if record.item_type.api_key == "text" %>
+          <div>
+            <%= markdownify(record.copy_block) %>
+          </div>
+        <% elsif record.item_type.api_key == "image" %>
+          <div class="gallery">
+            <% record.images.each do |image| %>
+              <img src="<%= image.url() %>" alt="<%= image.alt %>" title="<%= image.title %>" class="img-fluid" />
+            <% end %>
+          </div>
+        <% elsif record.item_type.api_key == "video" %>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="ytplayer" type="text/html" width="<%= record.video.width %>" height="<%= record.video.height %>"
+    src="https://www.youtube.com/embed/<%= record.video.provider_uid %>?autoplay=1"
+    frameborder="0"></iframe>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+</section>

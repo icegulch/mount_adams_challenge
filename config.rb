@@ -87,6 +87,21 @@ end
 
   activate :directory_indexes
   page "*.pdf", :directory_index => false
-  page "/admin/*", layout: false
 
+
+# due to how middleman 4 collections work (http://bit.ly/2jHZTI9), 
+# always use `dato` inside a `.tap` method block, like this:
+dato.tap do |dato|
+
+  # iterate over the "Blog post" records...
+  dato.reports.each do |report|
+
+    # ...and create a page for each report starting from a template!
+    proxy "/reports/#{report.slug}/index.html", "/templates/report.html", locals: { report: report }
+
+  end
+end
+
+# tell Middleman to ignore the template
+ignore "/templates/post.html.erb"
 

@@ -1,0 +1,61 @@
+---
+  title: Results
+---
+
+
+  <section class="section section--lightgray">
+      <p>
+        Share your <a href="/reports/">trip report</a>.
+      </p>
+      <% results_by_year.each do |year, results| %>
+          <table class="results-table">
+            <caption>
+              <%= year %>
+            </caption>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Pace (mi)</th>
+                <th>Report</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%  
+                  results_count = results.count.to_s
+                  sorted_year = results.sort_by { |d| d.run_date }.reverse
+                  sorted_year.each_with_index do |result,i|
+              %>
+                <tr>
+                  <td>
+                    <%= result.run_date.strftime("%^b %d") %>
+                  </td>
+                  <td>
+                    <%= result.first_name + ' ' + result.last_name %>
+                  </td>
+                  <td>
+                    <%= result.run_time %>
+                  </td>
+                  <td>
+                    <% 
+                        hours, minutes, seconds = result.run_time.split(':').map{ |a| a.to_i }
+                        total_seconds = seconds
+                        total_seconds += minutes * 60
+                        total_seconds += hours * 3600
+                        pace = total_seconds / 5.6
+                        pace_minutes, pace_seconds = pace.divmod(60)
+                    %>
+                    <%= "%02d:%02d" % [pace_minutes,pace_seconds] %>
+                  </td>
+                  <td>
+                    <% if result.related_report %>
+                      <%= link_to('read', result.related_report.slug) %>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+      <% end %>
+  </section>
