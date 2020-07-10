@@ -249,6 +249,14 @@ a {
       width: 16%;
     }
   }
+  td {
+    a {
+      color: #fff;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
   tbody > tr:nth-child(even) > td {
     background-color: darken($accent, 3%);
   }

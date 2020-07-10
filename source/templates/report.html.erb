@@ -30,7 +30,7 @@
         <% elsif record.item_type.api_key == "image" %>
           <div class="report-section">
             <% record.images.each do |image| %>
-              <img src="<%= image.url() %>" alt="<%= image.alt %>" title="<%= image.title %>" class="img-fluid" />
+              <img src="<%= image.url() %>" alt="<%= image.alt %>" title="<%= image.title %>" class="img-fluid" width="<%= image.width %>" height="<%= image.height %>" />
             <% end %>
           </div>
         <% elsif record.item_type.api_key == "video" %>

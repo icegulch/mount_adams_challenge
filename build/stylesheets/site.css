@@ -7688,6 +7688,10 @@ a {
         font-size: 13px; } }
     .results-table th:first-child, .results-table th:last-child, .results-table td:first-child, .results-table td:last-child {
       width: 16%; }
+  .results-table td a {
+    color: #fff; }
+    .results-table td a:hover, .results-table td a:focus {
+      text-decoration: underline; }
   .results-table tbody > tr:nth-child(even) > td {
     background-color: #4fa2a0; }
   .results-table caption {

@@ -169,18 +169,11 @@
           The Results
         </h1>
 
-        <table class="results-table">
-          <caption>
-            2020
-          </caption>
-          <thead>
-            <tr>
-              <th class="text-center">We are not recording results for 2020</th>
-            </tr>
-          </thead>
-        </table>
+        <div class="mt-5 alert alert-warning text-left">
+          Due to precautions around COVID-19, we are not recording Mount Adams Challenge results for 2020.
+        </div>
 
-        <% results_by_year.reject {|r| r[0] == 2020}.each do |year, results| %>
+        <% results_by_year.each do |year, results| %>
             <table class="results-table">
               <caption>
                 <%= year %>
@@ -192,8 +185,8 @@
                   <th>Time</th>
 <% if false %>
                   <th>Pace (mi)</th>
-                  <th>Report</th>
 <% end %>
+                  <th>Report?</th>
                 </tr>
               </thead>
               <tbody>
@@ -224,12 +217,12 @@
                       %>
                       <%= "%02d:%02d" % [pace_minutes,pace_seconds] %>
                     </td>
+<% end %>
                     <td>
                       <% if result.related_report %>
-                        <%= link_to('read', result.related_report.slug) %>
+                        <%= link_to('Read', 'reports/' + result.related_report.slug) %>
                       <% end %>
                     </td>
-<% end %>
                   </tr>
                 <% end %>
               </tbody>
