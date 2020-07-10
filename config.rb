@@ -103,5 +103,5 @@ dato.tap do |dato|
 end
 
 # tell Middleman to ignore the template
-ignore "/templates/post.html.erb"
+ignore "/templates/*.html"
 
