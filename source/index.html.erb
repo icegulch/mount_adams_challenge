@@ -41,7 +41,7 @@
           The Reward
         </h1>
         <p>
-          The White Mountain Café and SAalt Pub will congratulate you with the classic White Mountain Cafe latte drink of your choice, the beverage of your choice at SAalt Pub, a White Mountain Cafe sticker, and a very cool certificate courtesy of Borealchick Designs. But before we can, you’ll need to email us. See below for the full scoop!
+          SAalt Pub will congratulate you with the beverage of your choice and a very cool certificate courtesy of Borealchick Designs. But before we can, you’ll need to <%= link_to('contact us', '/contact') %>. See below for the full scoop!
         </p>
       </div>
     </div>
@@ -152,10 +152,7 @@
             Have fun and be supportive of others who are trying the challenge.
           </p>
           <p>
-            Questions? Contact us at <a href="mailto:info@whitemountaincafe.com">info@whitemountaincafe.com</a>.
-          </p>
-          <p>
-            Want your free stuff?<a href="mailto:info@whitemountaincafe.com">Email us</a> a photo of you on the summit showing your time on a watch. We’ll list you in the results, and then will share your name with the White Mountain Cafe and Salt Pub. Note: Just walking in to the cafe or pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!
+            Want your free stuff? <%= link_to('Send us', '/contact') %> a photo of you on the summit showing your time on a watch. We’ll list you in the results, and then will share your name with Saalt Pub. <b>Note: Just walking in to the pub and saying, “I did the Mount Adams Challenge” doesn’t cut it. Sorry!</b>
           </p>
         </div>
       </article>
@@ -230,9 +227,19 @@
         <% end %>
         <aside class="alt-section-text">
           <p>
-            Share your adventure on our <a href="http://adamschallenge.tumblr.com" target="_blank">blog</a>.
+            Share your adventure on our <%= link_to('blog', '/reports') %>.
           </p>
         </aside>
       </article>
     </div>
   </section>
+
+
+  <footer id="sponsors" role="contentinfo">
+    <figure class="sponsors__block">
+      <%= link_to(image_tag("saalt.png", :width => '250'), 'http://www.libbysbistro.org/#!saalt-pub/cjg9', :target => '_blank') %>
+      <figcaption class="special-thanks">
+        Photos made by <a href="http://klementovichphoto.com/" target="_blank">Klementovich Photo</a>.<br>
+      </figcaption>
+    </figure>
+  </footer>

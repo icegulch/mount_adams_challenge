@@ -280,13 +280,17 @@ a {
 }
 
 #sponsors {
-  position: relative;
   padding: 80px 15px;
   background: transparent image-url('challenge.jpg') no-repeat 100% 0%;
   background-size: cover;
   color: #fff;
   @media screen and (min-width: 768px) {
-    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    min-height: 100vh;
+    padding: 0 15px;
   }
 }
 
