@@ -104,4 +104,6 @@ end
 
 # tell Middleman to ignore the template
 ignore "/templates/*.html"
+ignore "/results/index.html"
+ignore "/route/index.html"
 
