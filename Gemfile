@@ -5,4 +5,4 @@ gem 'middleman-livereload'
 gem 'middleman-minify-html', '~>3.4.1'
 gem 'middleman-dato'
 gem 'middleman-paginate'
-gem 'redcarpet'
+gem "redcarpet", ">= 3.5.1"
